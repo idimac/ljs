@@ -30,6 +30,39 @@ function searchedArrays () { //second task
     document.getElementById('searchedText').value = backArray.join('');
 }
 
+function searchedOdd() { //third task
+    var arr = document.getElementById('searchOddSimb').value.split('');
+    var test = false;
+    for(var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+        var simb = arr[i];
+        test = true;
+        } 
+    };
+    if (test == false) {
+        alert ('Nothing odd numbers in your entered simbols')
+    };
+    
+    for(var i = 0; i < arr.length; i++) {
+        if (arr[i] < simb && arr[i] % 2 !==0)
+        simb = arr[i];
+    }
+    document.getElementById('searchedOddSimb').value = simb; 
+}
+
+
+function arithmeticMean () { //fourth task
+    var arr = document.getElementById('searchArithmeticMean').value.split('');
+    var sum = Number(arr[0]);
+    var count = 1;
+    for (var i = 1; i < arr.length; i++) {
+        sum = sum + Number(arr[i]);
+        count++;
+    }
+    var result = sum / count;
+    document.getElementById('searchedArithmeticMean').value = result; 
+
+}
 
 
 
