@@ -134,7 +134,22 @@ function CountNegative () { //six task
                 countMinimal = countMinimal + 1;
             }
         }
-        document.getElementById('calculatedMinimals').value = countMinimal;
+        document.getElementById('calculatedMinimals').value = "minimal number " + minimal + "; Count " + countMinimal;
+    }
+
+    function CalculateMultiple7 () { //Eighth task
+        var arraysMultiple7 = document.getElementById('calculateMultiple7').value.split(', ');
+        var result = [];
+        for(var i = 0; i < arraysMultiple7.length; i++) {
+            if (arraysMultiple7[i] % 7 === 0) {
+                result.push(arraysMultiple7[i]);
+            };
+        }
+        var count = 0;
+        for (var i = 0; i < result.length; i++) {
+        count++;
+        }
+        document.getElementById('calculatedMultiple7').value = count; 
     }
 
 
