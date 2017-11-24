@@ -180,5 +180,22 @@ function CountNegative () { //six task
         document.getElementById('searchedMaximal').value = Maximal;
     }
 
+    function SearchedDuplicate() {
+        var ourArray = ["2", "4", "7", "1", "1", "80", "67", "153", "4", "-9"];
+        var arrayUs = document.getElementById('searchDuplicate').value.split('');
+        var count = 0;
+        for (var j = 0; j < ourArray.length; j++) {
+        for (var i = 0; i < arrayUs.length; i++) {
+            if(ourArray[j] === arrayUs[i]) {
+                count++
+            }
+        }
+    }
+    if (count === 0) {
+        var count = 'Nothing duplicated';
+    }
+
+    document.getElementById('searchedDuplicate').value = count;
+    }
 
 
