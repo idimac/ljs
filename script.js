@@ -153,4 +153,32 @@ function CountNegative () { //six task
     }
 
 
+    function SearchedLastMinimal() { //ninth task
+        var arraysEntered = document.getElementById('searchMinimal').value.split('');
+        var result = [];
+        var Minimal = arraysEntered[arraysEntered.length - 1];
+        for (var i = arraysEntered.length; i >= 0 ; i--) {
+            if (arraysEntered[i] < Minimal) {
+                Minimal = arraysEntered[i];
+            }
+        }
+
+        document.getElementById('searchedMinimal').value = Minimal;
+    }
+
+
+    function SearchedMaximal() { //tenth task
+        var arraysEntered = document.getElementById('searchMaximal').value.split('');
+        var result = [];
+        var Maximal = arraysEntered[0];
+        for (var i = 1; i < arraysEntered.length; i++) {
+            if (arraysEntered[i] > Maximal) {
+                Maximal = arraysEntered[i];
+            }
+        }
+
+        document.getElementById('searchedMaximal').value = Maximal;
+    }
+
+
 
