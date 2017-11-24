@@ -121,5 +121,21 @@ function CountNegative () { //six task
     };
 
 
+    function CalculateMinimals () { //Seventh Task
+        var arraysMin = document.getElementById('calculateMinimal').value.split('');
+        var minimal = arraysMin[0];
+        countMinimal = 0;
+        for (var i = 0; i < arraysMin.length; i++) {
+            if (arraysMin[i] < minimal) {
+                minimal = arraysMin[i];
+                countMinimal = 1;
+            }
+            else if (arraysMin[i] === minimal) {
+                countMinimal = countMinimal + 1;
+            }
+        }
+        document.getElementById('calculatedMinimals').value = countMinimal;
+    }
+
 
 
