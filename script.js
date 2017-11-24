@@ -5,7 +5,7 @@ function backedArrays () { //first task
        backArray[j] = arr[i];
     }
     document.getElementById('backedText').value = backArray.join('');
-}
+};
 
 function searchedArrays () { //second task
     var arr = document.getElementById('searchText').value.split('');
@@ -28,7 +28,37 @@ function searchedArrays () { //second task
             }    
 }
     document.getElementById('searchedText').value = backArray.join('');
+};
+
+/*
+function foo(arr) { Второй вариант решения. Преподователя!
+    var result = {};
+    for (var i =o; i < arr.length; i++) {
+        if (result[arr[i]]){
+            result[arr[i]]++ ;
+        }
+        else {
+            result[arr[i]] = 1;
+        }
+    }
+    return result;
 }
+
+
+function foo(arr) { Третий вариант решения. Преподователя!
+    var result = {};
+    for (var i =o; i < arr.length; i++) {
+        var item = arr[i];
+        if (result[item){
+            result[item]++ ;
+        }
+        else if (arr.indexOf(item, i) > -1 ){
+            result[item] = 1;
+        }  
+        }
+        return result;
+}
+*/ 
 
 function searchedOdd() { //third task
     var arr = document.getElementById('searchOddSimb').value.split('');
@@ -48,7 +78,7 @@ function searchedOdd() { //third task
         simb = arr[i];
     }
     document.getElementById('searchedOddSimb').value = simb; 
-}
+};
 
 
 function arithmeticMean () { //fourth task
@@ -62,7 +92,34 @@ function arithmeticMean () { //fourth task
     var result = sum / count;
     document.getElementById('searchedArithmeticMean').value = result; 
 
+};
+
+function CountPositive () { //fifth task
+document.getElementById('searchedPositive').value = "";
+var arrays = document.getElementById('searchPositive').value.split(', ');
+var returned = arrays.filter (function(number) {
+    return number > 0;
+});
+var count = 0;
+for (var i = 0; i < returned.length; i++) {
+count++;
 }
+document.getElementById('searchedPositive').value = count;
+};
+
+function CountNegative () { //six task
+    document.getElementById('searchedPositive').value = "";
+    var arraysNeg = document.getElementById('searchPositive').value.split(', ');
+    var returnedNeg = arraysNeg.filter (function(number) {
+        return number < 0;
+    });
+    var countNeg = 0;
+    for (var i = 0; i < returnedNeg.length; i++) {
+    countNeg++;
+    }
+    document.getElementById('searchedPositive').value = countNeg;
+    };
+
 
 
 
